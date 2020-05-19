@@ -17,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\EventFlowApi.Common\EventFlowApi.Common.csproj" />
-    <ProjectReference Include="..\..\EventFlowApi.Core\EventFlowApi.Core.csproj" />
-    <ProjectReference Include="..\..\EventFlowApi.ElasticSearch\EventFlowApi.ElasticSearch.csproj" />
+    <ProjectReference Include="..\EventFlowApi.Common\EventFlowApi.Common.csproj" />
+    <ProjectReference Include="..\EventFlowApi.Core\EventFlowApi.Core.csproj" />
+    <ProjectReference Include="..\EventFlowApi.ElasticSearch\EventFlowApi.ElasticSearch.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,16 @@
+D:\EventFlowElastichSearch\EventFlowApi.Common\bin\Debug\netstandard2.0\EventFlowApi.Common.deps.json
+D:\EventFlowElastichSearch\EventFlowApi.Common\bin\Debug\netstandard2.0\EventFlowApi.Common.dll
+D:\EventFlowElastichSearch\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.csprojAssemblyReference.cache
+D:\EventFlowElastichSearch\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.AssemblyInfoInputs.cache
+D:\EventFlowElastichSearch\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.AssemblyInfo.cs
+D:\EventFlowElastichSearch\EventFlowApi.Common\bin\Debug\netstandard2.0\EventFlowApi.Common.pdb
+D:\EventFlowElastichSearch\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.dll
+D:\EventFlowElastichSearch\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.pdb
+D:\EventFlowElastichSearch\EventFlowApi\EventFlowApi.Common\bin\Debug\netstandard2.0\EventFlowApi.Common.deps.json
+D:\EventFlowElastichSearch\EventFlowApi\EventFlowApi.Common\bin\Debug\netstandard2.0\EventFlowApi.Common.dll
+D:\EventFlowElastichSearch\EventFlowApi\EventFlowApi.Common\bin\Debug\netstandard2.0\EventFlowApi.Common.pdb
+D:\EventFlowElastichSearch\EventFlowApi\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.csprojAssemblyReference.cache
+D:\EventFlowElastichSearch\EventFlowApi\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.AssemblyInfoInputs.cache
+D:\EventFlowElastichSearch\EventFlowApi\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.AssemblyInfo.cs
+D:\EventFlowElastichSearch\EventFlowApi\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.dll
+D:\EventFlowElastichSearch\EventFlowApi\EventFlowApi.Common\obj\Debug\netstandard2.0\EventFlowApi.Common.pdb
