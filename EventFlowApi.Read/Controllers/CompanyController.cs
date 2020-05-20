@@ -33,7 +33,7 @@ namespace EventFlowApi.Read.Controllers
                        new CompanyGetQuery(new CompanyId(companyId)), CancellationToken.None)
                        .ConfigureAwait(false);
 
-            var response = new CompanyResponse { TenantId = readModel.TenantId, Id = readModel.Id.GetGuid().ToString(), Name = readModel.Name, Address = readModel.Address };
+            var response = new CompanyResponse { TenantId = readModel.TenantId, Id = readModel.Id.GetGuid().ToString(), Name = readModel.Name, Address = readModel.Address, CreatedDate = readModel.CreatedDate, ModifiedDate = readModel.ModifiedDate, IsDeleted = readModel.IsDeleted };
             return response;
         }
     }

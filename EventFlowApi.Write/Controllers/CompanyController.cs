@@ -29,11 +29,11 @@ namespace EventFlowApi.Write.Controllers
         /// <param name="request">create employee request</param>
         /// <returns>employeeid</returns>
         [HttpPost]
-        public async Task<CompanyId> Post(CreateCompanyRequest request)
+        public async Task<CompanyId> Post(CompanyRequest request)
         {
             var id = Guid.NewGuid().ToString();
             var companyId = new CompanyId("company-" + id);
-            var companyRecord = new Company(companyId, request.Name, request.Address, "");
+            var companyRecord = new Company(companyId, request.Name, request.Address, "", DateTime.Now, null, null);
             var companyCommand = new CompanyAddCommand(companyId, companyRecord);
 
             await CommandBus.PublishAsync(companyCommand, CancellationToken.None).ConfigureAwait(false);
@@ -50,10 +50,10 @@ namespace EventFlowApi.Write.Controllers
         public async Task<bool> Delete(string companyId)
         {
             var company = await QueryProcessor.ProcessAsync(
-                       new CompanyGetQuery(new CompanyId(companyId)), CancellationToken.None)
-                       .ConfigureAwait(false);
-
+                new CompanyGetQuery(new CompanyId(companyId)), CancellationToken.None)
+                .ConfigureAwait(false);
             if (company == null) return false;
+
             var cmd = new CompanyDeleteCommand(company.Id, company);
             await CommandBus.PublishAsync(cmd, CancellationToken.None).ConfigureAwait(false);
 
@@ -64,16 +64,16 @@ namespace EventFlowApi.Write.Controllers
         /// Update Company Async
         /// </summary>
         /// <param name="companyId"></param>
+        /// <param name="request"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<bool> Put(string companyId)
+        public async Task<bool> Put(string companyId, CompanyRequest request)
         {
-            var company = await QueryProcessor.ProcessAsync(
-                       new CompanyGetQuery(new CompanyId(companyId)), CancellationToken.None)
-                       .ConfigureAwait(false);
-
-            if (company == null) return false;
-            var cmd = new CompanyEditCommand(company.Id, company);
+            var oldCompany = await QueryProcessor.ProcessAsync(
+                new CompanyGetQuery(new CompanyId(companyId)), CancellationToken.None)
+                .ConfigureAwait(false);
+            var newCompanyRecord = new Company(oldCompany.Id, request.Name, request.Address, "", oldCompany.CreatedDate, oldCompany.ModifiedDate, oldCompany.IsDeleted);
+            var cmd = new CompanyEditCommand(new CompanyId(companyId), newCompanyRecord);
             await CommandBus.PublishAsync(cmd, CancellationToken.None).ConfigureAwait(false);
 
             return true;

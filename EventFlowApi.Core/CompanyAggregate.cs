@@ -33,7 +33,7 @@ namespace EventFlowApi.Core
             _scopedContext = scopedContext;
 
             Register<CompanyAddedEvent>(e => _records.Add(id, e.CompanyRecord));
-            Register<CompanyAddedEvent>(e => _records[id] = e.CompanyRecord);
+            Register<CompanyEditedEvent>(e => _records[id] = e.CompanyRecord);
             Register<CompanyDeletedEvent>(e => _records.Remove(id));
             Register<CompanySagaStartRequestedEvent>(e => {/* do nothing */});
             Register<CompanySagaCompleteRequestedEvent>(e => {/* do nothing */});
@@ -63,9 +63,9 @@ namespace EventFlowApi.Core
         {
             Emit(new CompanyDeletedEvent(record));
         }
-        public void EditRecord(Company record)
+        public void EditRecord(Company company)
         {
-            Emit(new CompanyEditedEvent(record));
+            Emit(new CompanyEditedEvent(company));
         }
 
         public void RequestSagaStart()

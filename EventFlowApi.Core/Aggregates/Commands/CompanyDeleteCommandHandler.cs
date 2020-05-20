@@ -12,6 +12,6 @@ namespace EventFlowApi.Core.Aggregates.Commands
         {
             aggregate.DeleteRecord(command.CompanyRecord);
             return Task.FromResult(0);
-            }
+        }
     }
 }

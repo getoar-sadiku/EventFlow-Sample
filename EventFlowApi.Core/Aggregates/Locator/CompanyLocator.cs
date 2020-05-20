@@ -18,6 +18,12 @@ namespace EventFlowApi.Core.Aggregates.Locator
                 case CompanyAddedEvent companyRecordAddedEvent:
                     yield return companyRecordAddedEvent.CompanyRecord.Id.Value;
                     break;
+                case CompanyEditedEvent companyEditedEvent:
+                    yield return companyEditedEvent.CompanyRecord.Id.Value;
+                    break;
+                case CompanyDeletedEvent companyDeletedEvent:
+                    yield return companyDeletedEvent.CompanyRecord.Id.Value;
+                    break;
             }
         }
     }

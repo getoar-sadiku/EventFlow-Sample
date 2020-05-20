@@ -9,6 +9,10 @@ namespace EventFlowApi.Core.Aggregates.Events
     {
         public Company CompanyRecord { get; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CompanyDeletedEvent"/> class.
+        /// </summary>
+        /// <param name="companyRecord">The Company record.</param>
         public CompanyDeletedEvent(Company companyRecord)
         {
             CompanyRecord = companyRecord;
