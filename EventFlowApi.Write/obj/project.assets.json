@@ -91,6 +91,32 @@
           "lib/netstandard2.0/EventFlow.Elasticsearch.dll": {}
         }
       },
+      "EventFlow.EventStores.EventStore/0.68.3728": {
+        "type": "package",
+        "dependencies": {
+          "EventFlow": "0.68.3728",
+          "EventStore.ClientAPI.NetCore": "4.1.0.23"
+        },
+        "compile": {
+          "lib/netstandard2.0/EventFlow.EventStores.EventStore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EventFlow.EventStores.EventStore.dll": {}
+        }
+      },
+      "EventStore.ClientAPI.NetCore/4.1.0.23": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "protobuf-net": "2.3.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/EventStore.ClientAPI.NetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EventStore.ClientAPI.NetCore.dll": {}
+        }
+      },
       "JetBrains.Annotations/2020.1.0": {
         "type": "package",
         "compile": {
@@ -2895,6 +2921,24 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
+      "protobuf-net/2.3.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Xml.XmlSerializer": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/protobuf-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/protobuf-net.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -3998,7 +4042,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
@@ -4749,7 +4793,7 @@
           "System.Xml.XmlDocument": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
@@ -4799,6 +4843,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "EventFlow.EventStores.EventStore": "0.68.3728",
           "Swashbuckle.AspNetCore": "4.0.1"
         },
         "compile": {
@@ -4945,6 +4990,31 @@
         "lib/net451/EventFlow.Elasticsearch.dll",
         "lib/netstandard1.6/EventFlow.Elasticsearch.dll",
         "lib/netstandard2.0/EventFlow.Elasticsearch.dll"
+      ]
+    },
+    "EventFlow.EventStores.EventStore/0.68.3728": {
+      "sha512": "J0ndmWp13eDG/F2e3cLjxeYfeLy0/2NG+0Vw1trTANvc15SFDnem2htDz1ie0Z0rl5Nc3yPZPULvxQpPmCO3hg==",
+      "type": "package",
+      "path": "eventflow.eventstores.eventstore/0.68.3728",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "eventflow.eventstores.eventstore.0.68.3728.nupkg.sha512",
+        "eventflow.eventstores.eventstore.nuspec",
+        "lib/net462/EventFlow.EventStores.EventStore.dll",
+        "lib/netstandard2.0/EventFlow.EventStores.EventStore.dll"
+      ]
+    },
+    "EventStore.ClientAPI.NetCore/4.1.0.23": {
+      "sha512": "EGmGo0C3O1HLyo6/BnBs3qWphF+fVtm3Jre6TOnvvEGVMf7Hi4cayYExDbhQASsS6u6CVU4Tk65s7l1GWvE7dg==",
+      "type": "package",
+      "path": "eventstore.clientapi.netcore/4.1.0.23",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "eventstore.clientapi.netcore.4.1.0.23.nupkg.sha512",
+        "eventstore.clientapi.netcore.nuspec",
+        "lib/netstandard2.0/EventStore.ClientAPI.NetCore.dll"
       ]
     },
     "JetBrains.Annotations/2020.1.0": {
@@ -8076,6 +8146,25 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "protobuf-net/2.3.2": {
+      "sha512": "QyTFEJaF0scH/Vnpk75z/eOcnuhJMWY3xZ9sSnce4E7cCRIzi+3RN5J6ldFXwrxRdwH5La85wtrklaQwVkZnsQ==",
+      "type": "package",
+      "path": "protobuf-net/2.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/protobuf-net.dll",
+        "lib/net20/protobuf-net.xml",
+        "lib/net35/protobuf-net.dll",
+        "lib/net35/protobuf-net.xml",
+        "lib/net40/protobuf-net.dll",
+        "lib/net40/protobuf-net.xml",
+        "lib/netstandard1.3/protobuf-net.dll",
+        "lib/netstandard1.3/protobuf-net.xml",
+        "protobuf-net.2.3.2.nupkg.sha512",
+        "protobuf-net.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {

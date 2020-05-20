@@ -42,6 +42,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "EventFlow.EventStores.EventStore": {
+              "target": "Package",
+              "version": "[0.68.3728, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

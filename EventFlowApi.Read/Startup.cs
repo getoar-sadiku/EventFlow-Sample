@@ -54,7 +54,6 @@ namespace EventFlowApi.Read
             settings.DisableDirectStreaming();
 
             ElasticClient elasticClient = new ElasticClient(settings);
-            //string rabbitMqConnection = Environment.GetEnvironmentVariable("RABBITMQCONNECTION");
 
             Options = EventFlowOptions.New
               .UseAutofacContainerBuilder(containerBuilder)

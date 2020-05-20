@@ -21,6 +21,7 @@ using EventFlowApi.ElasticSearch.ReadModels;
 using Nest;
 using EventFlowApi.Common.Infrastructure;
 using EventFlowApi.ElasticSearch.QueryHandler;
+using EventFlowApi.Common.Extensions;
 
 namespace EventFlowApi.Write
 {
