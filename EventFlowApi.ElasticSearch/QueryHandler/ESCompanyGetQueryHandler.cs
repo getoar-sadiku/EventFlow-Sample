@@ -25,7 +25,7 @@ namespace EventFlowApi.ElasticSearch.QueryHandler
         public async Task<Company> ExecuteQueryAsync(CompanyGetQuery query, CancellationToken cancellationToken)
         {
             ReadModelDescription readModelDescription = _readModelDescriptionProvider.GetReadModelDescription<CompanyReadModel>();
-            string indexName = "eventflow-" + readModelDescription.IndexName.Value;
+            string indexName = readModelDescription.IndexName.Value;
 
             await _elasticClient.FlushAsync(indexName,
                     d => d.RequestConfiguration(c => c.AllowedStatusCodes((int)HttpStatusCode.NotFound)), cancellationToken)
@@ -35,8 +35,10 @@ namespace EventFlowApi.ElasticSearch.QueryHandler
                     d => d.RequestConfiguration(c => c.AllowedStatusCodes((int)HttpStatusCode.NotFound)), cancellationToken)
                     .ConfigureAwait(false);
 
-            IGetResponse<CompanyReadModel> response = await _elasticClient.GetAsync<CompanyReadModel>(query.CompanyId.Value,
-                d => d.RequestConfiguration(c => c.AllowedStatusCodes((int)HttpStatusCode.NotFound)).Index(readModelDescription.IndexName.Value), cancellationToken)
+            IGetResponse<CompanyReadModel> response = await _elasticClient.GetAsync<CompanyReadModel>(
+                query.CompanyId.Value.ToString(),
+                d => d.RequestConfiguration(c => c.AllowedStatusCodes((int)HttpStatusCode.NotFound))
+                .Index(indexName), cancellationToken)
                 .ConfigureAwait(false);
 
             return response.Source.ToCompany();

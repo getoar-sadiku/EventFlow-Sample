@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -41,6 +42,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "EventFlow.EventStores.EventStore": {
               "target": "Package",
@@ -67,7 +69,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -97,7 +99,12 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj": {
+                "projectPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -108,6 +115,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Autofac.Extensions.DependencyInjection": {
               "target": "Package",
@@ -146,7 +154,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -176,7 +184,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
+              "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj": {
+                "projectPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj"
+              },
               "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Core\\EventFlowApi.Core.csproj": {
                 "projectPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Core\\EventFlowApi.Core.csproj"
               }
@@ -191,6 +203,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "EventFlow.Elasticsearch": {
               "target": "Package",
@@ -217,7 +230,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -247,6 +260,7 @@
         },
         "frameworks": {
           "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
             "projectReferences": {
               "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj": {
                 "projectPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj"
@@ -268,6 +282,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "dependencies": {
             "EventFlow.Elasticsearch": {
               "target": "Package",
@@ -309,7 +324,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

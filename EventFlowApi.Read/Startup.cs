@@ -62,7 +62,7 @@ namespace EventFlowApi.Read
               .RegisterServices(sr => sr.Register<IScopedContext, ScopedContext>(Lifetime.Scoped))
               .RegisterServices(sr => sr.RegisterType(typeof(CompanyLocator)))
               .UseElasticsearchReadModel<CompanyReadModel, CompanyLocator>()
-              .AddQueryHandlers(typeof(ESCompanyGetQueryHandler))
+              .AddQueryHandlers(typeof(ESCompanyGetQueryHandler),typeof(ESCompanySearchByNameQueryHandler),typeof(EsCompanyGetByAddressQueryHandler))
               .Configure(c => c.IsAsynchronousSubscribersEnabled = true)
               .AddAspNetCoreMetadataProviders();
 

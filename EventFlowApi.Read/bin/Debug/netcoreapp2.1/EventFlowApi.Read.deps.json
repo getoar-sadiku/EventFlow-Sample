@@ -611,6 +611,7 @@
           "Autofac.Extensions.DependencyInjection": "4.3.1",
           "EventFlow.AspNetCore": "0.68.3728",
           "EventFlow.Autofac": "0.68.3728",
+          "EventFlowApi.Common": "1.0.0",
           "JetBrains.Annotations": "2020.1.0",
           "System.ComponentModel.Annotations": "4.5.0"
         },
@@ -624,6 +625,7 @@
       "EventFlowApi.ElasticSearch/1.0.0": {
         "dependencies": {
           "EventFlow.Elasticsearch": "0.68.3728",
+          "EventFlowApi.Common": "1.0.0",
           "EventFlowApi.Core": "1.0.0",
           "NEST": "6.5.0"
         },

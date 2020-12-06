@@ -13,9 +13,9 @@ namespace EventFlowApi.ElasticSearch.ReadModels
         IAmReadModelFor<CompanyAggregate, CompanyId, CompanyEditedEvent>,
         IAmReadModelFor<CompanyAggregate, CompanyId, CompanyDeletedEvent>
     {
-        [Keyword(Index = true)]
+        //[Keyword(Index = true)]
         public string TenantId { get; set; }
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -25,7 +25,7 @@ namespace EventFlowApi.ElasticSearch.ReadModels
         public void Apply(IReadModelContext context, IDomainEvent<CompanyAggregate, CompanyId, CompanyAddedEvent> domainEvent)
         {
             TenantId = domainEvent.Metadata["tenant_Id"];
-            Id = domainEvent.AggregateEvent.CompanyRecord.Id.Value;
+            Id = domainEvent.AggregateEvent.CompanyRecord.Id.GetGuid();
             Name = domainEvent.AggregateEvent.CompanyRecord.Name;
             Address = domainEvent.AggregateEvent.CompanyRecord.Address;
             CreatedDate = DateTime.Now;
@@ -34,7 +34,7 @@ namespace EventFlowApi.ElasticSearch.ReadModels
         public void Apply(IReadModelContext context, IDomainEvent<CompanyAggregate, CompanyId, CompanyEditedEvent> domainEvent)
         {
             TenantId = domainEvent.Metadata["tenant_Id"];
-            Id = domainEvent.AggregateEvent.CompanyRecord.Id.Value;
+            Id = domainEvent.AggregateEvent.CompanyRecord.Id.GetGuid();
             Name = domainEvent.AggregateEvent.CompanyRecord.Name;
             Address = domainEvent.AggregateEvent.CompanyRecord.Address;
             ModifiedDate = DateTime.Now;
@@ -43,7 +43,7 @@ namespace EventFlowApi.ElasticSearch.ReadModels
         public void Apply(IReadModelContext context, IDomainEvent<CompanyAggregate, CompanyId, CompanyDeletedEvent> domainEvent)
         {
             TenantId = domainEvent.Metadata["tenant_Id"];
-            Id = domainEvent.AggregateEvent.CompanyRecord.Id.Value;
+            Id = domainEvent.AggregateEvent.CompanyRecord.Id.GetGuid();
             Name = domainEvent.AggregateEvent.CompanyRecord.Name;
             Address = domainEvent.AggregateEvent.CompanyRecord.Address;
             IsDeleted = DateTime.Now;

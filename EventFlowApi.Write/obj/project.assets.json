@@ -4860,6 +4860,7 @@
           "Autofac.Extensions.DependencyInjection": "4.3.1",
           "EventFlow.AspNetCore": "0.68.3728",
           "EventFlow.Autofac": "0.68.3728",
+          "EventFlowApi.Common": "1.0.0",
           "JetBrains.Annotations": "2020.1.0",
           "System.ComponentModel.Annotations": "4.5.0"
         },
@@ -4875,6 +4876,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "EventFlow.Elasticsearch": "0.68.3728",
+          "EventFlowApi.Common": "1.0.0",
           "EventFlowApi.Core": "1.0.0",
           "NEST": "6.5.0"
         },
@@ -13235,6 +13237,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "projectReferences": {
             "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj": {
               "projectPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj"
@@ -13256,6 +13259,7 @@
     },
     "frameworks": {
       "netcoreapp2.1": {
+        "targetAlias": "netcoreapp2.1",
         "dependencies": {
           "EventFlow.Elasticsearch": {
             "target": "Package",
@@ -13297,7 +13301,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EventFlowApi.Common\EventFlowApi.Common.csproj" />
     <ProjectReference Include="..\EventFlowApi.Core\EventFlowApi.Core.csproj" />
   </ItemGroup>
 

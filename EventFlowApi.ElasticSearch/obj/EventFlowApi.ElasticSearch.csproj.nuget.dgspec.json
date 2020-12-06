@@ -4,6 +4,75 @@
     "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.ElasticSearch\\EventFlowApi.ElasticSearch.csproj": {}
   },
   "projects": {
+    "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj",
+        "projectName": "EventFlowApi.Common",
+        "projectPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://wsite.pkgs.visualstudio.com/_packaging/wsite-nuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "EventFlow.EventStores.EventStore": {
+              "target": "Package",
+              "version": "[0.68.3728, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Core\\EventFlowApi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -30,7 +99,12 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj": {
+                "projectPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -41,6 +115,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Autofac.Extensions.DependencyInjection": {
               "target": "Package",
@@ -79,7 +154,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -109,7 +184,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
+              "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj": {
+                "projectPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Common\\EventFlowApi.Common.csproj"
+              },
               "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Core\\EventFlowApi.Core.csproj": {
                 "projectPath": "D:\\EventFlowElastichSearch\\EventFlowApi\\EventFlowApi.Core\\EventFlowApi.Core.csproj"
               }
@@ -124,6 +203,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "EventFlow.Elasticsearch": {
               "target": "Package",
@@ -150,7 +230,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
